@@ -181,3 +181,10 @@ let g:vimtex_compiler_latexmk = {
   \   '-interaction=nonstopmode',
   \ ],
   \}
+
+" Key Mapping
+
+nmap fw :w<CR>
+nmap fq :q<CR>
+nmap fwq :wq<CR>
+nmap gs :Gstatus<CR>
