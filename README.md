@@ -1,3 +1,6 @@
-# My VIM Resource Configuration File
+# My Resource Configuration File
 
-**This Repository maintains the .vimrc file that I daliy use.**
+**This Repository maintains the .\*rc file that I daliy use.**
+
+* .vimrc
+* .zshrc
