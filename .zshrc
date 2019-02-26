@@ -102,5 +102,3 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.local/bin:$HOME/CondaEnv/Anaconda_Official/bin:$PATH"
-
-export CLASSPATH="/home/wen/2.tools/stanford-parser-full-2017-06-09/stanford-parser.jar:$CLASSPATH"
