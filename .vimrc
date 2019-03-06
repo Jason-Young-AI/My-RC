@@ -188,3 +188,36 @@ nmap fw :w<CR>
 nmap fq :q<CR>
 nmap fwq :wq<CR>
 nmap gs :Gstatus<CR>
+
+nmap ffc :call Compile()<CR>
+nmap ffr :call Run()<CR>
+
+func! Compile()
+    exec "w"
+
+    let compiler_name = ''
+    let compile_flag = '-g -Wall -lm --static'
+    let special_compile_flag = ''
+
+    if &filetype == 'c'
+        let compiler_name = 'gcc'
+        let special_compile_flag = '-std=c11'
+    endif
+
+    if &filetype == 'cpp'
+        let compiler_name = 'g++'
+        let special_compile_flag = '-O2 -std=c++11'
+    endif
+
+    if compiler_name != ''
+        let compile_command = compiler_name . ' % -o %< ' . compile_flag
+        if special_compile_flag != ''
+            let compile_command = compile_command . ' ' . special_compile_flag
+        endif
+        exec '!clear && '.compile_command
+    endif
+endfunc
+
+func! Run()
+    exec "!clear && ./%<"
+endfunc
