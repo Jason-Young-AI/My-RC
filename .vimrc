@@ -146,7 +146,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Deleted"   : "✖",
     \ "Dirty"     : "✗",
     \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
+    \ 'Ignored'   : '!',
     \ "Unknown"   : "?"
     \ }
 
