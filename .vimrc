@@ -17,7 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'morhetz/gruvbox'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bling/vim-bufferline'
@@ -33,6 +33,10 @@ Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/c.vim'
 Plugin 'jmcantrell/vim-virtualenv'
+
+Plugin 'Igorjan94/codeforces.vim'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -116,6 +120,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
 
 let g:bufferline_echo = 1
 let g:bufferline_active_buffer_left = '['
@@ -134,8 +139,8 @@ let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 23
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeShowIgnoredStatus = 1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -196,7 +201,7 @@ func! Compile()
     exec "w"
 
     let compiler_name = ''
-    let compile_flag = '-g -Wall -lm --static'
+    let compile_flag = '-g --static -lm -Wall -Wextra'
     let special_compile_flag = ''
 
     if &filetype == 'c'
@@ -221,3 +226,5 @@ endfunc
 func! Run()
     exec "!clear && ./%<"
 endfunc
+
+autocmd BufNewFile *.cpp 0r ~/.vim/Template/tpl.cpp | autocmd! BufNewFile
