@@ -132,12 +132,12 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | wincmd w
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd w | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-let g:NERDTreeNaturalSort = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeNaturalSort = 1
+"let g:NERDTreeNaturalSort = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 23
+let g:NERDTreeWinPos = 'right'
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -228,3 +228,12 @@ func! Run()
 endfunc
 
 autocmd BufNewFile *.cpp 0r ~/.vim/Template/tpl.cpp | autocmd! BufNewFile
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
