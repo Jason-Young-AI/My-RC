@@ -27,7 +27,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'previm/previm'
 Plugin 'tyru/open-browser.vim'
-
+Plugin 'aperezdc/vim-template'
 
 Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-fugitive'
@@ -35,7 +35,6 @@ Plugin 'vim-scripts/c.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 
 Plugin 'Igorjan94/codeforces.vim'
-Plugin 'ycm-core/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 
 
