@@ -112,6 +112,8 @@ autocmd FileType tex,javascript,html,css,xml,markdown set tabstop=2
 autocmd FileType tex,javascript,html,css,xml,markdown set softtabstop=2
 
 
+let g:email = 'AI.Jason.Young@outlook.com'
+let g:username = 'Jason Young (杨郑鑫)'
 let g:mapleader = "\\"
 let g:maplocalleader = "_"
 
@@ -236,3 +238,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:templates_directory = ['~/.vim/Templates',]
+let g:templates_user_variables = []
+let g:templates_use_licensee = 1
+let g:templates_detect_git = 1
