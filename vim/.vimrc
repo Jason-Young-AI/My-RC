@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'morhetz/gruvbox'
+Plugin 'aperezdc/vim-template'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -27,7 +28,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'previm/previm'
 Plugin 'tyru/open-browser.vim'
-Plugin 'aperezdc/vim-template'
 
 Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-fugitive'
@@ -239,7 +239,26 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:templates_no_autocmd = 0
 let g:templates_directory = ['~/.vim/Templates',]
 let g:templates_user_variables = []
 let g:templates_use_licensee = 1
 let g:templates_detect_git = 1
+
+"function EditNewFilename()
+"  let l:filename = input("filename: ")
+"  exec ':wincmd l'
+"  execute "edit " . l:filename
+"endfunction
+"
+"call NERDTreeAddMenuItem({
+"  \ 'text': 'New with (t)emplate',
+"  \ 'shortcut': 't',
+"  \ 'callback': 'EditNewFilename' })
+"
+"if ! g:templates_no_autocmd
+"  augroup Templating
+"    autocmd!
+"    autocmd BufNewFile,BufReadPost * call <SID>TLoad()
+"  augroup END
+"endif
