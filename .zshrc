@@ -118,3 +118,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="$HOME/.local/bin:$PATH"  # commented out by conda initialize
+
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/GitHub
