@@ -101,6 +101,8 @@ if [[ ! -d $ZSH_CACHE_DIR  ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+export PATH="$HOME/.local/bin:$HOME/.local/bin/YoungScripts:$PATH"  # commented out by conda initialize
+
 #
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -116,8 +118,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-export PATH="$HOME/.local/bin:$PATH"  # commented out by conda initialize
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/GitHub
