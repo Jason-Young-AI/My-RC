@@ -104,6 +104,9 @@ set laststatus=2
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 
 
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
 autocmd FileType c,cpp,python,php,java,sh set shiftwidth=4
 autocmd FileType c,cpp,python,php,java,sh set tabstop=4
 autocmd FileType c,cpp,python,php,java,sh set softtabstop=4
