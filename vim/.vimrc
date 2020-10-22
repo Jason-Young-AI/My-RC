@@ -37,6 +37,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 
 Plugin 'Igorjan94/codeforces.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'ycm-core/YouCompleteMe'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -107,9 +108,9 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-autocmd FileType c,cpp,python,php,java,sh set shiftwidth=4
-autocmd FileType c,cpp,python,php,java,sh set tabstop=4
-autocmd FileType c,cpp,python,php,java,sh set softtabstop=4
+autocmd FileType c,cpp,python,php,java,sh,hocon set shiftwidth=4
+autocmd FileType c,cpp,python,php,java,sh,hocon set tabstop=4
+autocmd FileType c,cpp,python,php,java,sh,hocon set softtabstop=4
 
 autocmd FileType tex,javascript,html,css,xml,markdown set shiftwidth=2
 autocmd FileType tex,javascript,html,css,xml,markdown set tabstop=2
