@@ -147,7 +147,7 @@ let g:NERDTreeWinPos = 'right'
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
-let g:NERDTreeGitStatusShowIgnored = 1
+let g:NERDTreeGitStatusShowIgnored = 0
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
