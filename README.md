@@ -13,8 +13,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 2. Backup the .vimrc file (if there exists .vimrc file):
 ```bash
-cd
-mv .vimrc .vimrc-backup
+mv ~/.vimrc ~/.vimrc-backup
 ```
 
 3. Clone **My-RC**:
@@ -22,13 +21,19 @@ mv .vimrc .vimrc-backup
 git clone https://github.com/Jason-Young-AI/My-RC.git
 ```
 
-4. Create symbolic link to .vimrc in **My-RC**:
+4. Create symbolic link to .vimrc and Templates folder in **My-RC**:
 ```bash
-cd
-ln -s ~/My-RC/vim/.vimrc .vimrc
+ln -s ~/My-RC/vim/.vimrc ~/.vimrc
+ln -s ~/My-RC/vim/Templates ~/.vim/Templates
 ```
 
-5. Run vim, then install the plugins that listed in .vimrc:
+5. Find line 120 and 121 in .vimrc, substituting in your *full name* and *email address*:
+```bash
+L120: let g:email = 'your_email@example.com'
+L121: let g:username = 'your full name'
+```
+
+6. Run vim, then install the plugins that listed in .vimrc:
 ```bash
 vim
 :PluginInstall
@@ -46,8 +51,8 @@ vim
 2. Backup the .zshrc and .zlogout file (if there exists .zsh and .zlogout file):
 ```bash
 cd
-mv .zshrc .zshrc-backup
-mv .zlogout .zlogout-backup
+mv ~/.zshrc ~/.zshrc-backup
+mv ~/.zlogout ~/.zlogout-backup
 ```
 
 3. Clone **My-RC**:
@@ -58,6 +63,6 @@ git clone https://github.com/Jason-Young-AI/My-RC.git
 4. Create symbolic link to .zshrc and .zlogout in **My-RC**:
 ```bash
 cd
-ln -s ~/My-RC/zsh/.zshrc .zshrc
-ln -s ~/My-RC/zsh/.zlogout .zlogout
+ln -s ~/My-RC/zsh/.zshrc ~/.zshrc
+ln -s ~/My-RC/zsh/.zlogout ~/.zlogout
 ```
