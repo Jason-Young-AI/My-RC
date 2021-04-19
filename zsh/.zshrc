@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/data/young/.oh-my-zsh"
+  export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -101,23 +101,6 @@ if [[ ! -d $ZSH_CACHE_DIR  ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-export PATH="$HOME/.local/bin:$HOME/.local/bin/YoungScripts:$PATH"  # commented out by conda initialize
-
-#
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/data/young/CondaEnv/Anaconda_Official/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/data/young/CondaEnv/Anaconda_Official/etc/profile.d/conda.sh" ]; then
-        . "/data/young/CondaEnv/Anaconda_Official/etc/profile.d/conda.sh"
-    else
-        export PATH="/data/young/CondaEnv/Anaconda_Official/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/GitHub
