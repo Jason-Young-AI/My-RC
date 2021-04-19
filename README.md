@@ -39,6 +39,47 @@ vim
 :PluginInstall
 ```
 
+**NOTE:**
+
+The plugins can be installed across any platforms:
+
+| Plugin    | Function                |
+|:----------|:------------------------|
+| **morhetz/gruvbox**  | Color scheme for Vim. |
+| **aperezdc/vim-template**  | Allowing you to have a set of templates for certain file types. |
+| **scrooloose/nerdcommenter** | Commenting codes. |
+| **preservim/nerdtree** | Tree explorer. |
+| **Xuyuanp/nerdtree-git-plugin** | NERDTree showing git status. |
+| **bling/vim-bufferline** | Show the list of buffers in the command bar. |
+| **vim-airline/vim-airline** | Status/Tabline for vim that's light as air. |
+| **vim-airline/vim-airline-themes** | A collection of themes for vim-airline. |
+| **godlygeek/tabular** | Text filtering and alignment. |
+| **plasticboy/vim-markdown** | Markdown Vim Mode. |
+| **lervag/vimtex** | Filetype plugin for LaTeX files. |
+| **tpope/vim-fugitive** | A Git wrapper. |
+| **vim-scripts/c.vim** | Filetype plugin for C/C++. |
+| **jmcantrell/vim-virtualenv** | Anything done with :python or :!python will behave like you would expect for the chosen virtualenv. |
+| **Raimondi/delimitMate** | Providing automatic closing of quotes, parenthesis, brackets, etc. |
+
+The plugins can only be installed on PC:
+
+| Plugin    | Function                |
+|:----------|:------------------------|
+| **previm/previm** | Realtime preview in browser by Vim. |
+| **tyru/open-browser.vim** | Open URI with your favorite browser from your most favorite editor. |
+| **tyru/open-browser-github.vim** | Opens GitHub URL of current file, etc. from Vim. Also supports GitHub Enterprise. |
+
+The plugins that are better to be installed manually:
+| Plugin    | Function                |
+|:----------|:------------------------|
+| **ycm-core/YouCompleteMe** | Code-completion engine. |
+
+Optional plugins:
+| Plugin    | Function                |
+|:----------|:------------------------|
+| **Igorjan94/codeforces.vim** | Vim plugin for CodeForces. |
+
+
 ### zsh
 1. Install [**ohmyzsh**](https://github.com/ohmyzsh/ohmyzsh):
 >Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either curl, wget or another similar tool.
