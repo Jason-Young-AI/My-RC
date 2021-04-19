@@ -140,7 +140,7 @@ autocmd VimEnter * NERDTree | wincmd w
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd w | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"let g:NERDTreeNaturalSort = 1
+" let g:NERDTreeNaturalSort = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 23
@@ -149,17 +149,20 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeGitStatusShowIgnored = 0
+let g:NERDTreeGitStatusShowClean = 1
+let g:NERDTreeGitStatusConcealBrackets = 1
+let g:NERDTreeGitStatusPorcelainVersion = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '!',
-    \ "Unknown"   : "?"
+    \ 'Modified'  : '✹',
+    \ 'Staged'    : '✚',
+    \ 'Untracked' : '✭',
+    \ 'Renamed'   : '➜',
+    \ 'Unmerged'  : '═',
+    \ 'Deleted'   : '✖',
+    \ 'Dirty'     : '✗',
+    \ 'Ignored'   : '☒',
+    \ 'Clean'     : '✔︎',
+    \ 'Unknown'   : '?',
     \ }
 
 let g:tex_flavor = 'latex'
@@ -234,7 +237,7 @@ func! Run()
     exec "!clear && ./%<"
 endfunc
 
-autocmd BufNewFile *.cpp 0r ~/.vim/Template/tpl.cpp | autocmd! BufNewFile
+autocmd BufNewFile *.cpp 0r ~/.vim/Templates/=template=.cpp | autocmd! BufNewFile
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
