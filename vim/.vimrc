@@ -19,25 +19,26 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'aperezdc/vim-template'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bling/vim-bufferline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'previm/previm'
-Plugin 'tyru/open-browser.vim'
-Plugin 'prabirshrestha/asyncomplete.vim'
 
 Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/c.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 
-Plugin 'Igorjan94/codeforces.vim'
 Plugin 'Raimondi/delimitMate'
-Plugin 'ycm-core/YouCompleteMe'
+
+" Plugin 'previm/previm'
+" Plugin 'tyru/open-browser.vim'
+" Plugin 'tyru/open-browser-github.vim'
+" Plugin 'Igorjan94/codeforces.vim'
+" Plugin 'ycm-core/YouCompleteMe'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
