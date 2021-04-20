@@ -91,7 +91,6 @@ Optional plugins:
 
 2. Backup the .zshrc and .zlogout file (if there exists .zsh and .zlogout file):
 ```bash
-cd
 mv ~/.zshrc ~/.zshrc-backup
 mv ~/.zlogout ~/.zlogout-backup
 ```
@@ -103,7 +102,6 @@ git clone https://github.com/Jason-Young-AI/My-RC.git
 
 4. Create symbolic link to .zshrc and .zlogout in **My-RC**:
 ```bash
-cd
 ln -s ~/My-RC/zsh/.zshrc ~/.zshrc
 ln -s ~/My-RC/zsh/.zlogout ~/.zlogout
 ```
