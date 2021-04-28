@@ -119,3 +119,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#
+export GEM_HOME=~/.ruby/
+export PATH=${PATH}:~/.ruby/bin
+
+export PATH=${PATH}:~/.local/bin
