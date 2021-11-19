@@ -1,0 +1,17 @@
+set default-bg "#f6f6f6"
+
+set inputbar-bg "#c0c090"
+set inputbar-fg "#000000"
+set statusbar-bg "#2a4b8d"
+set statusbar-fg "#ffffff"
+
+set page-padding 8
+
+set incremental-search true
+
+set window-width 900
+set window-height 900
+
+set guioptions "scvh"
+
+map <C-i> toggle_index
