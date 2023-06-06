@@ -79,6 +79,7 @@ Optional plugins:
 |:----------|:------------------------|
 | **Igorjan94/codeforces.vim** | Vim plugin for CodeForces. |
 
+You may need to install [Prepatched fonts](https://powerline.readthedocs.io/en/master/installation.html#patched-fonts) for powerline (vim-airline) style.
 
 ### zsh
 1. Install [**ohmyzsh**](https://github.com/ohmyzsh/ohmyzsh):
