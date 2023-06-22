@@ -102,3 +102,10 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/GitHub
+
+proxy_server=127.0.0.1
+proxy_sort=1080
+export http_proxy=http://$proxy_server:$proxy_port
+export HTTP_PROXY=$http_proxy
+export https_proxy=$http_proxy
+export HTTPS_PROXY=$http_proxy
