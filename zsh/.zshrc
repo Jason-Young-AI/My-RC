@@ -116,7 +116,7 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    ssh-add; #Your Keys
+    ssh-add ${HOME}/.ssh/TEMPConvert; #Your Keys
 }
 
 # Source SSH settings, if applicable
