@@ -101,12 +101,12 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-proxy_server=127.0.0.1 # Replace it with WSL Host IP
-proxy_port=1080
-export http_proxy=http://$proxy_server:$proxy_port
-export HTTP_PROXY=$http_proxy
-export https_proxy=$http_proxy
-export HTTPS_PROXY=$http_proxy
+#proxy_server=127.0.0.1 # Replace it with WSL Host IP
+#proxy_port=1080
+#export http_proxy=http://$proxy_server:$proxy_port
+#export HTTP_PROXY=$http_proxy
+#export https_proxy=$http_proxy
+#export HTTPS_PROXY=$http_proxy
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
