@@ -93,7 +93,6 @@ You may need to install [Prepatched fonts](https://powerline.readthedocs.io/en/m
 2. Backup the .zshrc and .zlogout file (if there exists .zsh and .zlogout file):
 ```bash
 mv ~/.zshrc ~/.zshrc-backup
-mv ~/.zlogout ~/.zlogout-backup
 ```
 
 3. Clone **My-RC**:
@@ -104,5 +103,4 @@ git clone https://github.com/Jason-Young-AI/My-RC.git
 4. Create symbolic link to .zshrc and .zlogout in **My-RC**:
 ```bash
 ln -s ~/My-RC/zsh/.zshrc ~/.zshrc
-ln -s ~/My-RC/zsh/.zlogout ~/.zlogout
 ```
