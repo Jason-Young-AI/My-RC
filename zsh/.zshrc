@@ -99,14 +99,45 @@ export LANG=en_US.UTF-8
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-#
 
-proxy_server=127.0.0.1 # Replace it with WSL Host IP
-proxy_port=1080
-export http_proxy=http://$proxy_server:$proxy_port
-export HTTP_PROXY=$http_proxy
-export https_proxy=$http_proxy
-export HTTPS_PROXY=$http_proxy
+proxy_on() {
+    # Change to Yours
+    local proxy_server="233.233.233.233"   # WSL Host IP
+    local proxy_port="23333"
+
+    # Auto Check Auth
+    local auth_user=""
+    local auth_pass=""
+
+    # Ask Auth Info
+    printf "Proxy Username (Leave Empty if No Auth): "
+    read auth_user
+
+    if [[ -n "$auth_user" ]]; then
+        printf "Proxy Password: " 
+        read -s auth_pass
+        echo
+        local proxy_url="http://${auth_user}:${auth_pass}@${proxy_server}:${proxy_port}"
+    else
+        local proxy_url="http://${proxy_server}:${proxy_port}"
+    fi
+
+    export http_proxy="$proxy_url"
+    export https_proxy="$proxy_url"
+    export HTTP_PROXY="$proxy_url"
+    export HTTPS_PROXY="$proxy_url"
+
+    export no_proxy="localhost,127.0.0.1"
+    export NO_PROXY="$no_proxy"
+
+    echo "Proxy Enabled"
+}
+
+proxy_off() {
+    unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY no_proxy NO_PROXY
+
+    echo "Proxy Disabled"
+}
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
@@ -116,7 +147,7 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    ssh-add; #Your Keys
+    ssh-add ${PathToYourKeys}; #Your Keys
 }
 
 # Source SSH settings, if applicable
@@ -132,3 +163,4 @@ else
 fi
 
 setopt nonomatch
+
