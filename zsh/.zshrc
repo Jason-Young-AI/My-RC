@@ -147,7 +147,7 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    ssh-add ${PathToYourKeys}; #Your Keys
+    ssh-add ${HOME}/.ssh/${YourKeys}; #Your Keys
 }
 
 # Source SSH settings, if applicable
